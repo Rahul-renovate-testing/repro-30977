@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update #renovate tagged version variables in YAML files. Any key and quoted or un-quoted value will match below the tag line",
+      "fileMatch": [
+        ".*\\.yaml"
+      ],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>[^ ]+?))? packageName=(?<packageName>[^ ]+?)(?:\\sversioning=(?<versioning>[a-z-]+?))?\\s+[^ ]+:\\s+['\"]?(?<currentValue>[\\w+\\.\\-]+)['\"]?"
+      ]
+    }
+  ]
+}
