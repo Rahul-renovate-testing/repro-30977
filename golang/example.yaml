@@ -1,0 +1,3 @@
+  - name: goVersion
+    # renovate: datasource=github-tags depName=go packageName=golang/go
+    value: 1.22.6
